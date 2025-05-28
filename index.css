@@ -1,0 +1,473 @@
+/* Global Styles */
+:root {
+    --primary-bg-color: #121212;
+    --secondary-bg-color: #1E1E1E;
+    --card-bg-color: #242424;
+    --primary-text-color: #EAEAEA;
+    --secondary-text-color: #B0B0B0;
+    --accent-color: #00AFFF; /* Bright Blue */
+    --accent-hover-color: #008ECC;
+    --border-color: #333333;
+    --font-primary: 'Open Sans', sans-serif;
+    --font-headings: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px; /* Base font size */
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-headings);
+    color: var(--primary-text-color);
+    margin-bottom: 1rem;
+}
+
+h1 { font-size: 3rem; }
+h2 { font-size: 2.5rem; text-align: center; margin-bottom: 2.5rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.25rem; color: var(--accent-color); }
+
+
+p {
+    margin-bottom: 1rem;
+    color: var(--secondary-text-color);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-hover-color);
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 0;
+}
+
+section {
+    min-height: 80vh; /* Make sections take up significant space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+section:last-of-type {
+    min-height: auto; /* Footer section doesn't need to be this tall */
+}
+
+
+/* Header & Navigation */
+#main-header {
+    background-color: rgba(30, 30, 30, 0.9); /* Slightly transparent dark background */
+    color: var(--primary-text-color);
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+}
+
+#main-header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#main-header .logo {
+    font-family: var(--font-headings);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+#main-header nav ul {
+    display: flex;
+}
+
+#main-header nav ul li {
+    margin-left: 1.5rem; /* Reduced margin for more items */
+}
+
+#main-header nav ul li a {
+    color: var(--primary-text-color);
+    font-weight: 600;
+    padding: 0.5rem 0;
+    position: relative;
+    font-size: 0.95rem; /* Slightly smaller font for more items */
+}
+
+#main-header nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+#main-header nav ul li a:hover::after,
+#main-header nav ul li a.active::after {
+    width: 100%;
+}
+#main-header nav ul li a.active {
+    color: var(--accent-color);
+}
+
+
+/* Hero Section */
+#hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(18, 18, 18, 0.85), rgba(18, 18, 18, 0.85)), 
+                url('https://source.unsplash.com/random/1600x900/?science,math,technology') no-repeat center center/cover; /* Placeholder image */
+    padding-top: 80px; /* Account for fixed header */
+}
+
+#hero .hero-content {
+    max-width: 800px;
+}
+
+#hero h1 {
+    font-size: 3.5rem; /* Adjusted for longer name */
+    margin-bottom: 0.5rem;
+    color: #fff; /* Brighter for hero */
+}
+
+#hero .subtitle {
+    font-size: 1.5rem; /* Adjusted for longer subtitle */
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+}
+
+#hero .intro-text {
+    font-size: 1.1rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--primary-bg-color) !important; /* Ensure text is dark */
+    padding: 0.8rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 175, 255, 0.3);
+}
+
+.cta-button:hover {
+    background-color: var(--accent-hover-color);
+    color: var(--primary-bg-color) !important; /* Ensure text remains dark on hover */
+    transform: translateY(-2px);
+}
+
+/* About Section */
+#about {
+    background-color: var(--secondary-bg-color);
+}
+#about .about-content {
+    text-align: center;
+}
+#about .about-content p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.link-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    color: var(--accent-color);
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.link-button.disabled {
+    border-color: var(--border-color);
+    color: var(--secondary-text-color);
+    cursor: not-allowed;
+}
+.link-button.disabled:hover {
+    background-color: transparent;
+    color: var(--secondary-text-color);
+}
+
+.link-button:not(.disabled):hover {
+    background-color: var(--accent-color);
+    color: var(--primary-bg-color) !important;
+}
+
+
+/* Research & Projects Section (was Projects Section) */
+#research {
+    /* Styles for the main research section if needed */
+}
+
+.section-subtitle {
+    font-size: 1.75rem;
+    color: var(--accent-color);
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+#research .container > .section-subtitle:first-of-type {
+    margin-top: 0;
+}
+
+
+.research-grid, .teaching-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.project-card, .research-item, .teaching-item, .data-science-links { /* Reusing project-card style */
+    background-color: var(--card-bg-color);
+    padding: 1.5rem; /* Adjusted padding */
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover, .research-item:hover, .teaching-item:hover, .data-science-links:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.research-item h4, .teaching-item h4 { /* Specific for research item titles */
+    color: var(--accent-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+.data-science-links p {
+    margin-bottom: 1rem;
+}
+
+.research-meta, .teaching-meta {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 1rem;
+}
+
+.research-abstract {
+    font-size: 0.95rem;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    color: var(--secondary-text-color);
+}
+.research-abstract strong {
+    color: var(--primary-text-color);
+}
+
+
+.project-tags, .skills-keywords {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.project-tags span, .skills-keywords span {
+    display: inline-block;
+    background-color: var(--border-color);
+    color: var(--secondary-text-color);
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 15px;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-links {
+    margin-top: auto; /* Pushes links to the bottom of the card */
+    padding-top: 1rem; /* Space above links if there's content */
+}
+
+.project-links .link-button {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem; /* For wrapping */
+}
+.project-links a:not(.link-button) { /* For plain text links if any */
+    margin-right: 1rem;
+    font-weight: 600;
+}
+
+/* Skills Section */
+#skills {
+    background-color: var(--secondary-bg-color);
+}
+#skills .container {
+    text-align: center;
+}
+.skills-keywords {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Teaching Section */
+#teaching {
+    /* Styles for the main teaching section if needed */
+}
+
+.teaching-item { /* Specific styles for teaching items if different from research items */
+    /* Inherits from .project-card styles */
+}
+
+
+/* Contact Section */
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-links a {
+    font-size: 1.2rem; 
+    margin: 0 1rem;
+    color: var(--secondary-text-color);
+    transition: color 0.3s ease;
+}
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--secondary-bg-color);
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) { /* Adjust breakpoint for nav items */
+    #main-header nav ul li {
+        margin-left: 1rem;
+    }
+    #main-header nav ul li a {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+    h1 { font-size: 2.5rem; }
+    #hero h1 { font-size: 2.8rem; } /* Adjusted for long name */
+    #hero .subtitle { font-size: 1.3rem; }
+    h2 { font-size: 2rem; }
+    .section-subtitle { font-size: 1.5rem; }
+    
+    #main-header nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    #main-header .logo {
+        margin-bottom: 0.5rem;
+    }
+    #main-header nav ul {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    #main-header nav ul li {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: center;
+    }
+     #main-header nav ul li a {
+        display: block;
+        padding: 0.5rem;
+        font-size: 1rem; /* Restore size for stacked nav */
+    }
+    #main-header {
+        position: relative; /* Make header static on small screens */
+    }
+    #hero {
+      padding-top: 2rem; /* Adjust padding if header is not fixed */
+    }
+
+    .container {
+        padding: 2.5rem 1rem; /* Added horizontal padding to container for mobile */
+    }
+    section {
+        min-height: auto; /* Allow sections to size naturally on mobile */
+        padding: 2rem 0; /* Remove horizontal padding from section, use container's */
+    }
+    .research-grid, .teaching-grid {
+        grid-template-columns: 1fr; /* Stack cards */
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14px; /* Smaller base font for small devices */
+    }
+    #hero h1 { font-size: 2.2rem; }
+    #hero .subtitle { font-size: 1.1rem; }
+    .cta-button { padding: 0.7rem 1.5rem; }
+    .link-button {padding: 0.5rem 1rem; }
+    .project-card, .research-item, .teaching-item { padding: 1rem; }
+    h4 { font-size: 1.15rem; }
+}

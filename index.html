@@ -3,102 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Houssam BOUKHECHAM</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background: #444;
-        }
-        nav a {
-            color: #fff;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background: #555;
-        }
-        section {
-            padding: 20px;
-        }
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        h2 {
-            color: #333;
-        }
-    </style>
+    <title>Houssam Boukhecham | ATER, Aix-Marseille University</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <h1>Houssam BOUKHECHAM</h1>
+    <header id="main-header">
+        <nav>
+            <div class="logo">Houssam B.</div>
+            <ul>
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#research" class="nav-link">Research</a></li>
+                <li><a href="#teaching" class="nav-link">Teaching</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#research">Research</a>
-        <a href="#teaching">Teaching</a>
-        <a href="#datascience">Data Science</a>
-        <a href="#miscellaneous">Miscellaneous</a>
-    </nav>
+    <main>
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Houssam BOUKHECHAM</h1>
+                <p class="subtitle">ATER (Attaché Temporaire d'Enseignement et de Recherche) at Aix-Marseille University</p>
+                <p class="intro-text">Focusing on Spectral Analysis, Time Series, Statistics, Probability, FreSpeD, and Dynamical Systems.</p>
+                <a href="#research" class="cta-button">View My Research</a>
+            </div>
+        </section>
 
-    <section id="home" class="container">
-        <h2>Home</h2>
-        <p>Welcome to my homepage. My name is Houssam, and I am currently an ATER (attaché temporaire enseignement et recherche) at Aix-Marseille University.
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <p>I am currently an ATER (Attaché Temporaire d'Enseignement et de Recherche) at Aix-Marseille University. My key research interests include Spectral analysis, time series, statistics, probability, FreSpeD, and dynamical systems.</p>
+                    <p><a href="#" class="link-button disabled" aria-label="My CV (Coming Soon)" onclick="event.preventDefault();">CV (Coming Soon)</a></p>
+                </div>
+            </div>
+        </section>
 
-        </p>
-    </section>
+        <section id="research">
+            <div class="container">
+                <h2>Research &amp; Projects</h2>
 
-    <section id="research" class="container">
-        <h2>Research</h2>
-        <p>My research interests lie in Statistics, Dynamics, and Time Series. You can find more details about my work on <a href="https://sites.google.com/view/houssam-boukhecham/research" target="_blank">my research page</a>.</p>
-    </section>
+                <h3 class="section-subtitle">Preprints</h3>
+                <div class="research-grid">
+                    <div class="research-item project-card">
+                        <h4>SRB measures for hyperbolic attractor in low regularity</h4>
+                        <p class="research-meta">Journal of Dynamical Systems Taylor and Francis.</p>
+                        <div class="project-links">
+                            <a href="https://arxiv.org/abs/2106.11304" target="_blank" rel="noopener noreferrer" class="link-button" aria-label="View PDF on Arxiv for SRB measures for hyperbolic attractor in low regularity">View PDF (Arxiv)</a>
+                        </div>
+                        <p class="research-abstract"><strong>Abstract:</strong> We consider a $C^1$ hyperbolic attractor, and prove the existence of a physical measure provided that the differential satisfies some summability condition which is weaker than Hölder continuity.</p>
+                    </div>
+                    <div class="research-item project-card">
+                        <h4>Topology of the space of measure-preserving transformations of the circle</h4>
+                        <p class="research-meta">Collaboration with Hamza Ounesli.</p>
+                         <div class="project-links">
+                            <a href="https://arxiv.org/abs/2203.01101" target="_blank" rel="noopener noreferrer" class="link-button" aria-label="View PDF on Arxiv for Topology of the space of measure-preserving transformations of the circle">View PDF (Arxiv)</a>
+                        </div>
+                        <p class="research-abstract"><strong>Abstract:</strong> We prove that the space of $C^1$ expanding maps of the circle preserving Lebesgue measure is arc-connected. The techniques involved in the proof are rather unexpected and lead to a formulation of a general questions.</p>
+                    </div>
+                    <div class="research-item project-card">
+                        <h4>Mixing speed and stability of SRB measures through optimal transportation</h4>
+                        <p class="research-meta">Collaboration with Benoît Kloeckner.</p>
+                        <div class="project-links">
+                            <a href="https://arxiv.org/abs/2305.10267" target="_blank" rel="noopener noreferrer" class="link-button" aria-label="View PDF on Arxiv for Mixing speed and stability of SRB measures through optimal transportation">View PDF (Arxiv)</a>
+                        </div>
+                        <p class="research-abstract"><strong>Abstract:</strong> It is well-known that the SRB measure of a $C^{1+\alpha}$ Anosov diffeomorphism has exponential decay of correlations with respect to Hölder-continuous observables. We propose a new approach to this phenomenon, based on optimal transport.</p>
+                    </div>
+                </div>
 
-    <section id="teaching" class="container">
-        <h2>Teaching</h2>
-        <p> 
-            
-        </p>
-    </section>
+                <h3 class="section-subtitle">PhD Thesis</h3>
+                <div class="research-grid">
+                    <div class="research-item project-card">
+                        <h4>Existence of SRB measures for hyperbolic maps with weak regularity</h4>
+                        <p class="research-meta">Defended on December 12th, 2023.</p>
+                        <div class="project-links">
+                             <a href="https://houssamboukhecham.github.io/manuscript_Houssam_BOUKHECHAM.pdf" target="_blank" rel="noopener noreferrer" class="link-button" aria-label="View PhD Thesis manuscript">View Manuscript</a>
+                        </div>
+                    </div>
+                </div>
 
-    <section id="datascience" class="container">
-        <h2>Data Science</h2>
-        <p>I work on various projects in data science, including EEG analysis, change point detection </p>
-    </section>
+                <h3 class="section-subtitle">Master Theses (Mathematics)</h3>
+                <div class="research-grid">
+                    <div class="research-item project-card">
+                        <h4>On the existence of absolutely continuous invariant measure for expanding maps of the circle</h4>
+                        <p class="research-meta">Mars-August 2020, Paris-Est Créteil University. (Written in French)</p>
+                        <!-- Add link if available -->
+                    </div>
+                    <div class="research-item project-card">
+                        <h4>A simple proof of Liouville's theorem (conformal geometry) in dimension 3</h4>
+                        <p class="research-meta">Mars-June 2019, University of Lille. (Written in French)</p>
+                         <!-- Add link if available -->
+                    </div>
+                </div>
+                
+                <h3 class="section-subtitle">Master's Thesis (Data Science)</h3>
+                 <div class="research-grid">
+                    <div class="research-item project-card">
+                        <h4>Frequency-Specific Change-Point Detection in EEG Signals</h4>
+                        <p class="research-meta">April-September 2024, Aix-Marseille University.</p>
+                        <!-- Add link if available -->
+                    </div>
+                </div>
 
-    <section id="Miscellaneous" class="container">
-        <h2>Miscellaneous</h2>
-        <p>This section is reserved for future content or projects that I am currently working on.</p>
-    </section>
+                <h3 class="section-subtitle">Data Science Projects</h3>
+                <div class="data-science-links project-card">
+                    <p>Explore some of my data science work on these platforms:</p>
+                    <div class="project-links">
+                        <a href="https://github.com/HoussamBoukhe" target="_blank" rel="noopener noreferrer" class="link-button" aria-label="Houssam Boukhecham's GitHub Profile">GitHub</a>
+                        <a href="https://www.kaggle.com/houssamboukhecham/code" target="_blank" rel="noopener noreferrer" class="link-button" aria-label="Houssam Boukhecham's Kaggle Profile">Kaggle</a>
+                        <a href="https://gitlab.com/houssam.boukhecham96" target="_blank" rel="noopener noreferrer" class="link-button" aria-label="Houssam Boukhecham's GitLab Profile">GitLab</a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- <footer>
-        <p>© 2024 Houssam Boukhecham. All rights reserved.</p>
-    </footer> -->
+        <section id="teaching">
+            <div class="container">
+                <h2>Teaching Experience</h2>
+                <div class="teaching-grid">
+                    <div class="teaching-item project-card">
+                        <h4>TP computational statistics (M1)</h4>
+                        <p class="teaching-meta">January to Mars 2025 | Aix-Marseille University</p>
+                    </div>
+                    <div class="teaching-item project-card">
+                        <h4>Course and TD real Analysis (L1)</h4>
+                        <p class="teaching-meta">January to April 2025 | Aix-Marseille University</p>
+                    </div>
+                    <div class="teaching-item project-card">
+                        <h4>Functions and complexes numbers (L1)</h4>
+                        <p class="teaching-meta">November to December 2024 | Aix-Marseille University</p>
+                    </div>
+                    <div class="teaching-item project-card">
+                        <h4>TD real analysis (first year L1)</h4>
+                        <p class="teaching-meta">October to November 2024 | Aix-Marseille University</p>
+                    </div>
+                    <div class="teaching-item project-card">
+                        <h4>TD real analysis (first year L1)</h4>
+                        <p class="teaching-meta">January to April 2023 | Paris-East Créteil University</p>
+                    </div>
+                    <div class="teaching-item project-card">
+                        <h4>TD Introduction to probability (L2)</h4>
+                        <p class="teaching-meta">September to December 2022 | Paris-East Créteil University</p>
+                    </div>
+                    <div class="teaching-item project-card">
+                        <h4>Course and TD of Calculus (L1)</h4>
+                        <p class="teaching-meta">September to December 2021 | Paris-East Créteil University</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="skills">
+            <div class="container">
+                <h2>Key Research Areas</h2>
+                 <div class="skills-keywords project-tags">
+                    <span>Spectral analysis</span>
+                    <span>Time series</span>
+                    <span>Statistics</span>
+                    <span>Probability</span>
+                    <span>FreSpeD</span>
+                    <span>Dynamical systems</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>Get In Touch</h2>
+                <p>I'm always open to discussing new research, collaborations, or opportunities. Feel free to reach out!</p>
+                <a href="mailto:houssam.boukhecham@univ-amu.fr" class="cta-button">Email Me</a>
+                <div class="social-links">
+                    <a href="https://github.com/HoussamBoukhe" target="_blank" rel="noopener noreferrer" aria-label="Houssam Boukhecham's GitHub Profile">GitHub</a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Houssam Boukhecham's LinkedIn Profile (Placeholder)">LinkedIn</a>
+                    <!-- <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Houssam Boukhecham's Twitter Profile">Twitter</a> -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Houssam Boukhecham. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="index.tsx"></script>
 </body>
-</html>
+</html><link rel="stylesheet" href="index.css">
+<script src="index.tsx" type="module"></script>
